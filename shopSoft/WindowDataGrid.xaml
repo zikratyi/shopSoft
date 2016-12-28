@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:shopSoft"
         mc:Ignorable="d"
-        Title="WindowDataGrid" Height="500" Width="400  ">
+        Title="WindowDataGrid" Height="500" Width="1010">
     <Grid>
-        <DataGrid x:Name="dataGridClient" HorizontalAlignment="Left" Height="79" Margin="7,16,0,0" VerticalAlignment="Top" Width="380"/>
-        <DataGrid x:Name="dataGridManager" HorizontalAlignment="Left" Height="89" Margin="8,114,0,0" VerticalAlignment="Top" Width="380"/>
-        <DataGrid x:Name="dataGridRequest" HorizontalAlignment="Left" Height="124" Margin="6,337,0,0" VerticalAlignment="Top" Width="380"/>
-        <DataGrid x:Name="dataGridSoftware" HorizontalAlignment="Left" Height="108" Margin="11,217,0,0" VerticalAlignment="Top" Width="375"/>
+        <DataGrid x:Name="dataGridClient" HorizontalAlignment="Left" Height="170" Margin="23,48,0,0" VerticalAlignment="Top" Width="450"/>
+        <DataGrid x:Name="dataGridManager" HorizontalAlignment="Left" Height="170" Margin="515,48,0,0" VerticalAlignment="Top" Width="450"/>
+        <DataGrid x:Name="dataGridRequest" HorizontalAlignment="Left" Height="170" Margin="512,276,0,0" VerticalAlignment="Top" Width="450"/>
+        <DataGrid x:Name="dataGridSoftware" HorizontalAlignment="Left" Height="170" Margin="18,276,0,0" VerticalAlignment="Top" Width="450"/>
+        <Label x:Name="labelDBClients" Content="DB Clients:" HorizontalAlignment="Left" Height="30" Margin="29,18,0,0" VerticalAlignment="Top" Width="189"/>
+        <Label x:Name="labelDBManagers" Content="DB Managers:" HorizontalAlignment="Left" Height="27" Margin="518,18,0,0" VerticalAlignment="Top" Width="159"/>
+        <Label x:Name="labelDBSoftwares" Content="DB Softwares:" HorizontalAlignment="Left" Height="30" Margin="21,243,0,0" VerticalAlignment="Top" Width="161"/>
+        <Label x:Name="labelDBRequests" Content="DB Requests:" HorizontalAlignment="Left" Height="31" Margin="515,246,0,0" VerticalAlignment="Top" Width="177"/>
 
     </Grid>
 </Window>

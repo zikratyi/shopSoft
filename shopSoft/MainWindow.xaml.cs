@@ -59,7 +59,7 @@ namespace shopSoft
             }
             using (FileStream fs = new FileStream("softwares.dat", FileMode.OpenOrCreate))
             {
-                formatter.Serialize(fs, DB.Softwares)
+                formatter.Serialize(fs, DB.Softwares);
             }
             using (FileStream fs = new FileStream("requests.dat", FileMode.OpenOrCreate))
             {
@@ -85,24 +85,73 @@ namespace shopSoft
         private void buttonLoadDB_Click(object sender, RoutedEventArgs e)
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream fs = new FileStream("clients.dat", FileMode.OpenOrCreate))
+            string fileClients = "clients.dat";
+            string statusLoad = String.Empty;
+            FileInfo fileClientsInfo = new FileInfo(fileClients);
+            if (fileClientsInfo.Exists)
             {
-                DB.Clients = (ObservableCollection<ClientPersonal>)formatter.Deserialize(fs);
+                using (FileStream fs = new FileStream(fileClients, FileMode.OpenOrCreate))
+                {
+                    DB.Clients = (ObservableCollection<ClientPersonal>)formatter.Deserialize(fs);
+                    statusLoad = " Clients,";
+                }
             }
-            using (FileStream fs = new FileStream("managers.dat", FileMode.OpenOrCreate))
+            else
             {
-                DB.Managers = (ObservableCollection<Manager>)formatter.Deserialize(fs);
-                listBoxManagers.ItemsSource = DB.Managers;
+                MessageBox.Show("DB Clients not exist. First create new Client");
             }
-            using (FileStream fs = new FileStream("softwares.dat", FileMode.OpenOrCreate))
+            string fileManagers = "managers.dat";
+            FileInfo fileManagersInfo = new FileInfo(fileManagers);
+            if (fileManagersInfo.Exists)
             {
-                DB.Softwares = (ObservableCollection<ListSoftware>)formatter.Deserialize(fs);
+                using (FileStream fs = new FileStream(fileManagers, FileMode.OpenOrCreate))
+                {
+                    DB.Managers = (ObservableCollection<Manager>)formatter.Deserialize(fs);
+                    listBoxManagers.ItemsSource = DB.Managers;
+                    statusLoad = statusLoad + " Manager, ";
+                }
             }
-            using (FileStream fs = new FileStream("requests.dat", FileMode.OpenOrCreate))
+            else
             {
-                DB.Requests = (ObservableCollection<Request>)formatter.Deserialize(fs);
+                MessageBox.Show("DB Managers not exist. First create new Manager");
             }
-            MessageBox.Show("db load OK!");
+            string fileSoftwares = "softwares.dat";
+            FileInfo fileSoftwaresInfo = new FileInfo(fileSoftwares);
+            if (fileSoftwaresInfo.Exists)
+            {
+                using (FileStream fs = new FileStream(fileSoftwares, FileMode.OpenOrCreate))
+                {
+                    DB.Softwares = (ObservableCollection<ListSoftware>)formatter.Deserialize(fs);
+                    statusLoad = statusLoad + " Softwares, ";
+                }
+            }
+            else
+            {
+                MessageBox.Show("DB Softwares not exist. First create new Price");
+            }
+            string fileRequests = "requests.dat";
+            FileInfo fileRequestsInfo = new FileInfo(fileRequests);
+            if (fileRequestsInfo.Exists)
+            {
+                using (FileStream fs = new FileStream(fileRequests, FileMode.OpenOrCreate))
+                {
+                    DB.Requests = (ObservableCollection<Request>)formatter.Deserialize(fs);
+                    statusLoad = statusLoad + " Request";
+                }
+            }
+            else
+            {
+                MessageBox.Show("DB Request not exist. First create new Request");
+            }
+            if (statusLoad != String.Empty)
+            {
+                MessageBox.Show(String.Format("DB: {0} load Ok!", statusLoad));
+            }
+            else
+            {
+                MessageBox.Show("DB not load. Create new objects");
+            }
+            
         }
         /// <summary>
         /// View contests DB
@@ -127,7 +176,14 @@ namespace shopSoft
         {
             Manager manager;
             manager = (Manager)listBoxManagers.SelectedItem;
-            manager.CreateRequest();
+            if (listBoxManagers.SelectedItem == null)
+            {
+                MessageBox.Show("Select manager");
+            }
+            else
+            {
+                manager.CreateRequest();
+            }
         }
         /// <summary>
         /// Create new window for input information about Manager

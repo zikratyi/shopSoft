@@ -7,17 +7,23 @@
         mc:Ignorable="d"
         Title="WindowRequest" Height="300" Width="300">
     <Grid>
-        <Label x:Name="labelRequest" Content="Create new order" HorizontalAlignment="Left" Height="27" Margin="28,15,0,0" VerticalAlignment="Top" Width="239"/>
-        <ComboBox x:Name="comboBoxClient" HorizontalAlignment="Left" Height="25" Margin="26,55,0,0" VerticalAlignment="Top" Width="240"/>
-        <ComboBox x:Name="comboBoxItem" HorizontalAlignment="Left" Height="25" Margin="25,134,0,0" VerticalAlignment="Top" Width="240"/>
-        <Grid x:Name="gridRequestDetails" DataContext="{Binding ElementName=comboBoxItem, Path=SelectedItem}">
-            <TextBox x:Name="textBoxPrice" HorizontalAlignment="Left" Height="25" Margin="28,173,0,0" TextWrapping="Wrap" Text="{Binding Path=RegularPrice}" VerticalAlignment="Top" Width="105"/>
-            <TextBox x:Name="textBoxDiscount" HorizontalAlignment="Left" Height="25" Margin="159,173,0,0" TextWrapping="Wrap" Text="{Binding Path=Discount}" VerticalAlignment="Top" Width="105"/>
-            <TextBox x:Name="textBoxTotal" HorizontalAlignment="Left" Height="25" Margin="28,209,0,0" TextWrapping="Wrap" Text="{Binding Path=ActionPrice}" VerticalAlignment="Top" Width="105"/>
-            
+        <Label x:Name="labelRequest" Content="Create new order" HorizontalAlignment="Left" Height="27" Margin="27,15,0,0" VerticalAlignment="Top" Width="239"/>
+        <ComboBox x:Name="comboBoxClient" HorizontalAlignment="Left" Height="25" Margin="116,62,0,0" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="comboBoxItem" HorizontalAlignment="Left" Height="25" Margin="117,134,0,0" VerticalAlignment="Top" Width="148"/>
+        <Grid x:Name="gridRequestDetails" DataContext="{Binding ElementName=comboBoxItem, Path=SelectedItem}" Margin="-1,-3,1,3">
+            <TextBox x:Name="textBoxPrice" HorizontalAlignment="Left" Height="25" Margin="91,173,0,0" TextWrapping="Wrap" Text="{Binding Path=RegularPrice}" VerticalAlignment="Top" Width="42"/>
+            <TextBox x:Name="textBoxDiscount" HorizontalAlignment="Left" Height="25" Margin="223,173,0,0" TextWrapping="Wrap" Text="{Binding Path=Discount}" VerticalAlignment="Top" Width="41"/>
+            <TextBox x:Name="textBoxTotal" HorizontalAlignment="Left" Height="25" Margin="92,209,0,0" TextWrapping="Wrap" Text="{Binding Path=ActionPrice}" VerticalAlignment="Top" Width="41"/>
+            <Label x:Name="labelManagerName" Content="Manager:" HorizontalAlignment="Left" Height="26" Margin="25,99,0,0" VerticalAlignment="Top" Width="62"/>
+            <Label x:Name="labelPrice" Content="Price:" HorizontalAlignment="Left" Height="25" Margin="26,173,0,0" VerticalAlignment="Top" Width="59"/>
+            <Label x:Name="labelTotal" Content="Total:" HorizontalAlignment="Left" Height="26" Margin="28,209,0,0" VerticalAlignment="Top" Width="60"/>
+            <Label x:Name="labelDiscount" Content="Discount:" HorizontalAlignment="Left" Height="24" Margin="153,174,0,0" VerticalAlignment="Top" Width="65"/>
+            <Label x:Name="labelSelectclient" Content="Select client:" HorizontalAlignment="Left" Height="27" Margin="28,63,0,0" VerticalAlignment="Top" Width="81"/>
+            <Label x:Name="labelSelectSoftware" Content="Select software:" HorizontalAlignment="Left" Height="26" Margin="24,137,0,0" VerticalAlignment="Top" Width="96"/>
+
         </Grid>
-        <Button x:Name="buttonCreateRequest" Content="Create Request" HorizontalAlignment="Left" Height="25" Margin="160,226,0,0" VerticalAlignment="Top" Width="105" Click="buttonCreateRequest_Click"/>
-        <Label x:Name="labelManager" Content="" HorizontalAlignment="Left" Height="25" Margin="29,95,0,0" VerticalAlignment="Top" Width="241"/>
+        <Button x:Name="buttonCreateRequest" Content="Create Request" HorizontalAlignment="Left" Height="25" Margin="162,231,0,0" VerticalAlignment="Top" Width="105" Click="buttonCreateRequest_Click"/>
+        <Label x:Name="labelManager" Content="" HorizontalAlignment="Left" Height="25" Margin="117,95,0,0" VerticalAlignment="Top" Width="153"/>
 
     </Grid>
 </Window>

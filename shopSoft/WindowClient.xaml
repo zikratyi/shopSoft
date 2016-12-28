@@ -5,20 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:shopSoft"
         mc:Ignorable="d"
-        Title="WindowClient" Height="300" Width="300">
+        Title="WindowClient" Height="300" Width="387.97">
     <Grid>
-        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="25" Margin="21,77,0,0" TextWrapping="Wrap" Text="Last name" VerticalAlignment="Top" Width="105"/>
-        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="25" Margin="21,112,0,0" TextWrapping="Wrap" Text="First name" VerticalAlignment="Top" Width="105"/>
-        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="25" Margin="21,147,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" Width="105"/>
-        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="25" Margin="21,182,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="105"/>
-        <TextBox x:Name="textBoxCity" HorizontalAlignment="Left" Height="25" Margin="163,77,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" Width="105"/>
-        <TextBox x:Name="textBoxStreet" HorizontalAlignment="Left" Height="25" Margin="163,111,0,0" TextWrapping="Wrap" Text="Street" VerticalAlignment="Top" Width="105"/>
-        <TextBox x:Name="textBoxBuilding" HorizontalAlignment="Left" Height="25" Margin="163,146,0,0" TextWrapping="Wrap" Text="Building" VerticalAlignment="Top" Width="105"/>
-        <TextBox x:Name="textBoxApart" HorizontalAlignment="Left" Height="25" Margin="163,181,0,0" TextWrapping="Wrap" Text="Apart" VerticalAlignment="Top" Width="105"/>
-        <Label x:Name="labelPersonalInfo" Content="Personal info" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="20,49,0,0" VerticalAlignment="Top" Width="105"/>
-        <Label x:Name="labelAddress" Content="Address" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="162,49,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="25" Margin="73,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113"/>
+        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="25" Margin="73,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113"/>
+        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="25" Margin="73,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="25" Margin="73,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113"/>
+        <TextBox x:Name="textBoxCity" HorizontalAlignment="Left" Height="25" Margin="249,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxStreet" HorizontalAlignment="Left" Height="25" Margin="249,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxBuilding" HorizontalAlignment="Left" Height="25" Margin="249,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxApart" HorizontalAlignment="Left" Height="25" Margin="249,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelPersonalInfo" Content="Personal info" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="54,47,0,0" VerticalAlignment="Top" Width="103"/>
+        <Label x:Name="labelAddress" Content="Address" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="249,47,0,0" VerticalAlignment="Top" Width="104"/>
         <Button x:Name="buttonCreate" Content="Create" HorizontalAlignment="Left" Height="26" Margin="21,232,0,0" VerticalAlignment="Top" Width="89" Click="buttonCreate_Click"/>
         <Label x:Name="labelClient" Content="Input information about new client" HorizontalAlignment="Left" Height="26" Margin="18,12,0,0" VerticalAlignment="Top" Width="249"/>
+        <Label x:Name="labelLastName" Content="Last name:" HorizontalAlignment="Left" Height="24" Margin="8,76,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="labelFirstName" Content="Firstname:" HorizontalAlignment="Left" Height="24" Margin="8,112,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="labelPhone" Content="Phone:" HorizontalAlignment="Left" Height="24" Margin="8,149,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="labelEmail" Content="e-mail:" HorizontalAlignment="Left" Height="24" Margin="8,182,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="labelCity" Content="City:" HorizontalAlignment="Left" Height="25" Margin="192,77,0,0" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="labelStreet" Content="Street:" HorizontalAlignment="Left" Height="25" Margin="192,113,0,0" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="labelBuild" Content="Build:" HorizontalAlignment="Left" Height="25" Margin="192,145,0,0" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="labelApart" Content="Apart" HorizontalAlignment="Left" Height="25" Margin="192,181,0,0" VerticalAlignment="Top" Width="53"/>
 
     </Grid>
 </Window>
