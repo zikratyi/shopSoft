@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:shopSoft"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="653.948">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="667*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="buttonCreateClient" Content="Create Client" HorizontalAlignment="Left" Height="35" Margin="27,140,0,0" VerticalAlignment="Top" Width="125" Click="buttonCreateClient_Click"/>
+        <Button x:Name="buttonLoadDB" Content="Load DB" HorizontalAlignment="Left" Height="35" Margin="27,23,0,0" VerticalAlignment="Top" Width="125" Click="buttonLoadDB_Click"/>
+        <Button x:Name="buttonSaveClients" Content="Save DB" HorizontalAlignment="Left" Height="35" Margin="184,24,0,0" VerticalAlignment="Top" Width="125" Click="buttonSaveDB_Click"/>
+        <Button x:Name="buttonViewDB" Content="View DB" HorizontalAlignment="Left" Height="35" Margin="347,25,0,0" VerticalAlignment="Top" Width="125" Click="buttonViewDB_Click"/>
+        <Button x:Name="buttonCreateManager" Content="Create Manager" HorizontalAlignment="Left" Height="35" Margin="28,193,0,0" VerticalAlignment="Top" Width="125" Click="buttonCreateManager_Click"/>
+        <Button x:Name="buttonCreatePrice" Content="Create Price" HorizontalAlignment="Left" Height="35" Margin="29,245,0,0" VerticalAlignment="Top" Width="125" Click="buttonCreatePrice_Click"/>
+        <Button x:Name="buttonCreateRequest" Content="Create Request" HorizontalAlignment="Left" Height="35" Margin="484,258,0,0" VerticalAlignment="Top" Width="125" Click="buttonCreateRequest_Click"/>
+        <ListBox x:Name="listBoxManagers" HorizontalAlignment="Left" Height="104" Margin="228,143,0,0" VerticalAlignment="Top" Width="382"/>
+
     </Grid>
 </Window>

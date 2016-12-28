@@ -1,0 +1,19 @@
+﻿<Window x:Class="shopSoft.WindowPrice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:shopSoft"
+        mc:Ignorable="d"
+        Title="WindowPrice" Height="300" Width="300">
+    <Grid>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="50" Margin="24,61,0,0" TextWrapping="Wrap" Text="nameItem" VerticalAlignment="Top" Width="240"/>
+        <TextBox x:Name="textBoxRegularPrice" HorizontalAlignment="Left" Height="25" Margin="24,120,0,0" TextWrapping="Wrap" Text="RegularPrice" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="textBoxAction" HorizontalAlignment="Left" Height="25" Margin="27,194,0,0" TextWrapping="Wrap" Text="Action" VerticalAlignment="Top" Width="240"/>
+        <TextBox x:Name="textBoxPrice" HorizontalAlignment="Left" Height="25" Margin="25,231,0,0" TextWrapping="Wrap" Text="ActionPrice" VerticalAlignment="Top" Width="105"/>
+        <Button x:Name="buttonCreateItem" Content="Create Item" HorizontalAlignment="Left" Height="25" Margin="162,231,0,0" VerticalAlignment="Top" Width="105" Click="buttonCreateItem_Click"/>
+        <TextBox x:Name="textBoxDiscount" HorizontalAlignment="Left" Height="25" Margin="26,159,0,0" TextWrapping="Wrap" Text="Discount" VerticalAlignment="Top" Width="105"/>
+        <Label x:Name="labelPrice" Content="Input information about new software" HorizontalAlignment="Left" Height="27" Margin="26,11,0,0" VerticalAlignment="Top" Width="237"/>
+
+    </Grid>
+</Window>
