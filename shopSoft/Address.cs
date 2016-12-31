@@ -11,14 +11,18 @@ namespace shopSoft
     {
         public string city { set; get; }
         public string street { set; get; }
-        public string bulding { set; get; }
+        public string building { set; get; }
         public string apart { set; get; }
-        public Address(string city, string street, string building, string apart)
+        public Address(string city, string street, string bulding, string apart)
         {
             this.city = city;
             this.street = street;
-            this.bulding = bulding;
+            this.building = bulding;
             this.apart = apart;
+        }
+        public Address()
+        {
+
         }
     }
 }

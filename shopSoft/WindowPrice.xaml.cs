@@ -28,11 +28,11 @@ namespace shopSoft
         {
             string name = textBoxName.Text;
             double regularPrice = Convert.ToDouble(textBoxRegularPrice.Text);
-            double discount = Convert.ToDouble(textBoxDiscount.Text);
+            int discount = Convert.ToInt32(textBoxDiscount.Text);
             string action = textBoxAction.Text;
-            double actionPrice = Convert.ToDouble(textBoxPrice.Text);
+            double actionPrice = Convert.ToDouble(textBoxActionPrice.Text);
             ListSoftware Item;
-            if (action == String.Empty)
+            if (action == "No action")
             {
                 Item = new ListSoftware(name, regularPrice);
             }

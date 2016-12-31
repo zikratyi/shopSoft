@@ -30,6 +30,7 @@ namespace shopSoft
             listBoxManagers.ItemsSource = DB.Managers;
             
         }
+       
         /// <summary>
         /// Create new data base
         /// </summary>
@@ -74,8 +75,11 @@ namespace shopSoft
         /// <param name="e"></param>
         private void buttonCreateClient_Click(object sender, RoutedEventArgs e)
         {
-            WindowClient Window = new WindowClient();
-            Window.Show();
+            WindowClient windowClient = new WindowClient();
+            windowClient.Owner = this;
+            //windowClient.comboBoxClients.ItemsSource = DB.Clients;
+            //windowClient.comboBoxClients.SelectedIndex = 0;
+            windowClient.Show();
         }
         /// <summary>
         /// Load DB (DB includes file: Clients, Managers, Softwares and Requests)
@@ -161,6 +165,7 @@ namespace shopSoft
         private void buttonViewDB_Click(object sender, RoutedEventArgs e)
         {
             WindowDataGrid windowResult = new WindowDataGrid();
+            windowResult.Owner = this;
             windowResult.dataGridClient.ItemsSource = DB.Clients;
             windowResult.dataGridManager.ItemsSource = DB.Managers;
             windowResult.dataGridSoftware.ItemsSource = DB.Softwares;
@@ -203,8 +208,9 @@ namespace shopSoft
         /// <param name="e"></param>
         private void buttonCreatePrice_Click(object sender, RoutedEventArgs e)
         {
-            WindowPrice Price = new WindowPrice();
-            Price.Show();
+            WindowPrice windowPrice = new WindowPrice();
+            windowPrice.Owner = this;
+            windowPrice.Show();
         }
 
         

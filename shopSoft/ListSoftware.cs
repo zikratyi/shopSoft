@@ -12,7 +12,7 @@ namespace shopSoft
         private int _idItem;
         public string NameItem { set; get; }
         public double RegularPrice { set; get; }
-        public double Discount { set; get; }
+        public int _discount;
         public string Action { set; get; }
         public double ActionPrice { set; get; }
         public int IDItem
@@ -27,8 +27,22 @@ namespace shopSoft
             }
 
         }
-
-        public ListSoftware(string nameItem, double regularPrice, double  discount = 1.0, string action = "No action", double actionPrice = 0)
+        public int Discount
+        {
+            set
+            {
+                if (value >= 0 && value <= 100)
+                {
+                    _discount = value;
+                }
+                else _discount = 0;
+            }
+            get
+            {
+                return _discount;
+            }
+        }
+        public ListSoftware(string nameItem, double regularPrice, int  discount = 0, string action = "No action", double actionPrice = 0)
         {
             this.IDItem = IDItem;
             NameItem = nameItem;
@@ -38,10 +52,11 @@ namespace shopSoft
             ActionPrice = actionPrice;
         }
 
-        public ListSoftware(int idItem, string nameItem)
+        public ListSoftware(int idItem, string nameItem, int discount = 0)
         {
             IDItem = idItem;
             NameItem = nameItem;
+            Discount = discount;
 
         }
 

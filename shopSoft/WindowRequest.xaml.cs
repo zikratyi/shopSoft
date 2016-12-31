@@ -32,10 +32,30 @@ namespace shopSoft
             order.Manager = (Manager)labelManager.Content;
             order.Item = comboBoxItem.SelectedItem.ToString();
             order.Price = Convert.ToDouble(textBoxPrice.Text);
-            order.Discount = Convert.ToDouble(textBoxDiscount.Text);
+            order.Discount = Convert.ToInt32(textBoxDiscount.Text);
+            order.Amount = Convert.ToInt32(textBoxAmount.Text);
             order.Total = Convert.ToDouble(textBoxTotal.Text);
             MainWindow.DB.Requests.Add(order);
             MessageBox.Show("Request add");
+        }
+
+        private void buttonCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            double total = 0;
+            int discount = Convert.ToInt32(textBoxDiscount.Text);
+            if (discount == 0)
+            {
+                total = Convert.ToDouble(textBoxPrice.Text) * Convert.ToDouble(textBoxAmount.Text);
+            }
+            else if (discount > 0 && discount < 100)
+            {
+                total = Convert.ToDouble(textBoxPrice.Text) * Convert.ToDouble(textBoxAmount.Text) * (1.0 - discount / 100.0);
+            }
+            else
+            {
+                MessageBox.Show("Input corect value for field 'Discount' (0,99)");
+            }
+            textBoxTotal.Text = total.ToString();
         }
     }
 }

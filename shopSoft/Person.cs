@@ -20,5 +20,9 @@ namespace shopSoft
             this.phone = phone;
             this.email = email;
         }
+        public Person()
+        {
+
+        }
     }
 }

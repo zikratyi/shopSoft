@@ -14,14 +14,22 @@ namespace shopSoft
         public Manager Manager { set; get; }
         public string Item { set; get; }
         public double Price { set; get; }
-        public double Discount { set; get; }
+        public int Discount { set; get; }
+        public int Amount { set; get; }
         public double Total { set; get; }
 
         public int IDRequest
         {
             set
             {
-                _idRequest = (int)MainWindow.DB.Requests.LongCount() + 1;
+                if (MainWindow.DB.Requests.Count() != 0)
+                {
+                    _idRequest = MainWindow.DB.Requests.Last<Request>().IDRequest + 1;
+                }
+                else
+                {
+                    _idRequest = 1;
+                }
             }
             get
             {
@@ -29,7 +37,7 @@ namespace shopSoft
             }
 
         }
-        public Request (ClientPersonal client, Manager manager, string item, double price, double discount, double total)
+        public Request (ClientPersonal client, Manager manager, string item, double price, int discount, int amount, double total)
         {
             this.IDRequest = IDRequest;
             Client = client;
@@ -37,6 +45,7 @@ namespace shopSoft
             Item = item;
             Price = price;
             Discount = discount;
+            Amount = amount;
             Total = total; 
         }
         public Request()

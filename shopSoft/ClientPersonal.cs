@@ -15,7 +15,15 @@ namespace shopSoft
         {
             set
             {
-                _id = (int)MainWindow.DB.Clients.LongCount() + 1;
+                if (MainWindow.DB.Clients.Count<ClientPersonal>() != 0)
+                {
+                    _id = MainWindow.DB.Clients.Last<ClientPersonal>().ID + 1;
+                }
+                else
+                {
+                    _id = 1;
+                }
+                
             }
             get
             {
@@ -23,12 +31,18 @@ namespace shopSoft
             }
 
         }
+        
 
-        public ClientPersonal( Address AddressClient, string lastName, string firstName, string phone, string email) : 
+        public ClientPersonal(Address AddressClient, string lastName, string firstName, string phone, string email) : 
             base(lastName, firstName, phone, email)
         {
             this.ID = ID;
             this.AddressClient = AddressClient;
+        }
+        public ClientPersonal():base()
+        {
+            this.ID = ID;
+            
         }
         public override string ToString()
         {
