@@ -13,7 +13,7 @@
         <Grid x:Name="gridRequestDetails" DataContext="{Binding ElementName=comboBoxItem, Path=SelectedItem}" Margin="-1,-3,1,3">
             <TextBox x:Name="textBoxPrice" HorizontalAlignment="Left" Height="25" Margin="91,194,0,0" TextWrapping="Wrap" Text="{Binding Path=RegularPrice}" VerticalAlignment="Top" Width="90"/>
             <TextBox x:Name="textBoxDiscount" HorizontalAlignment="Left" Height="25" Margin="271,196,0,0" TextWrapping="Wrap" Text="{Binding Path=Discount}" VerticalAlignment="Top" Width="90"/>
-            <TextBox x:Name="textBoxTotal" HorizontalAlignment="Left" Height="25" Margin="271,272,0,0" TextWrapping="Wrap" Text="{Binding Path=ActionPrice}" VerticalAlignment="Top" Width="90"/>
+            <TextBox x:Name="textBoxTotal" HorizontalAlignment="Left" Height="25" Margin="271,272,0,0" TextWrapping="Wrap" Text="{Binding Path=Price}" VerticalAlignment="Top" Width="90"/>
             <Label x:Name="labelManagerName" Content="Manager:" HorizontalAlignment="Left" Height="26" Margin="25,99,0,0" VerticalAlignment="Top" Width="62"/>
             <Label x:Name="labelPrice" Content="Price:" HorizontalAlignment="Left" Height="25" Margin="26,194,0,0" VerticalAlignment="Top" Width="59"/>
             <Label x:Name="labelTotal" Content="Total:" HorizontalAlignment="Left" Height="26" Margin="205,272,0,0" VerticalAlignment="Top" Width="60"/>
@@ -23,6 +23,8 @@
             <TextBox x:Name="textBoxAmount" HorizontalAlignment="Left" Height="25" Margin="271,233,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="90"/>
             <Label x:Name="labelAmount" Content="Amount:" HorizontalAlignment="Left" Height="25" Margin="189,231,0,0" VerticalAlignment="Top" Width="68"/>
             <Button x:Name="buttonCalculate" Content="Calculate" HorizontalAlignment="Left" Height="25" Margin="289,328,0,0" VerticalAlignment="Top" Width="90" Click="buttonCalculate_Click"/>
+            <Label x:Name="labelAction" Content="{Binding Path=Action}" HorizontalAlignment="Left" Height="30" Margin="32,238,0,0" VerticalAlignment="Top" Width="150"/>
+            <Label x:Name="labelActionPrice" Content="{Binding Path=ActionPrice}" HorizontalAlignment="Left" Height="30" Margin="32,278,0,0" VerticalAlignment="Top" Width="150"/>
 
         </Grid>
         <Button x:Name="buttonCreateRequest" Content="Create Request" HorizontalAlignment="Left" Height="25" Margin="20,323,0,0" VerticalAlignment="Top" Width="90" Click="buttonCreateRequest_Click"/>

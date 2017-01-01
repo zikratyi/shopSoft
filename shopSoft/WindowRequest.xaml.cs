@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,7 +23,11 @@ namespace shopSoft
         public WindowRequest()
         {
             InitializeComponent();
-            
+            textBoxPrice.PreviewTextInput += new TextCompositionEventHandler(TextBox_PreviewTextInput);
+            textBoxAmount.PreviewTextInput += new TextCompositionEventHandler(TextBox_PreviewTextInput);
+            textBoxDiscount.PreviewTextInput += new TextCompositionEventHandler(TextBox_PreviewTextInput);
+            textBoxTotal.PreviewTextInput += new TextCompositionEventHandler(TextBox_PreviewTextInput);
+
         }
 
         private void buttonCreateRequest_Click(object sender, RoutedEventArgs e)
@@ -56,6 +61,15 @@ namespace shopSoft
                 MessageBox.Show("Input corect value for field 'Discount' (0,99)");
             }
             textBoxTotal.Text = total.ToString();
+        }
+        Regex inputRegex = new Regex(@"([0-9]|,)");
+        void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Match match = inputRegex.Match(e.Text);
+            if (!match.Success)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

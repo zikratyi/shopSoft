@@ -10,6 +10,7 @@ namespace shopSoft
     class Request
     {
         private int _idRequest;
+        private DateTime _dateRequest;
         public ClientPersonal Client { set; get; }
         public Manager Manager { set; get; }
         public string Item { set; get; }
@@ -37,9 +38,21 @@ namespace shopSoft
             }
 
         }
+        public DateTime DateRequest
+        {
+            set
+            {
+                _dateRequest = DateTime.Now;
+            }
+            get
+            {
+                return _dateRequest;
+            }
+        }
         public Request (ClientPersonal client, Manager manager, string item, double price, int discount, int amount, double total)
         {
             this.IDRequest = IDRequest;
+            this.DateRequest = DateRequest;
             Client = client;
             Manager = manager;
             Item = item;
@@ -51,6 +64,7 @@ namespace shopSoft
         public Request()
         {
             this.IDRequest = IDRequest;
+            this.DateRequest = DateRequest;
         }
     }
 }

@@ -40,7 +40,7 @@ namespace shopSoft
             Manager Manager = new Manager(lastName, firstName, login, pass, phone, email, AddressManager);
             MainWindow.DB.Managers.Add(Manager);
             MessageBox.Show("Managers add");
-            Close();
+            
         }
     }
 }
