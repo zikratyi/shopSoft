@@ -197,9 +197,10 @@ namespace shopSoft
         /// <param name="e"></param>
         private void buttonCreateManager_Click(object sender, RoutedEventArgs e)
         {
-            WindowManager Manager = new WindowManager();
-            Manager.Owner = this;
-            Manager.Show();
+            WindowManager windowManager = new WindowManager();
+            windowManager.Owner = this;
+            
+            windowManager.Show();
         }
         /// <summary>
         /// Create new window for input information about Software
@@ -209,6 +210,8 @@ namespace shopSoft
         private void buttonCreatePrice_Click(object sender, RoutedEventArgs e)
         {
             WindowPrice windowPrice = new WindowPrice();
+            windowPrice.comboBoxPrice.ItemsSource = DB.Softwares;
+            //windowPrice.comboBoxPrice.SelectedIndex = 0;
             windowPrice.Owner = this;
             windowPrice.Show();
         }
