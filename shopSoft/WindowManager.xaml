@@ -7,29 +7,35 @@
         mc:Ignorable="d"
         Title="WindowManager" Height="400" Width="400">
     <Grid>
-        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="25" Margin="102,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="25" Margin="102,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="25" Margin="102,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="25" Margin="102,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxCity" HorizontalAlignment="Left" Height="25" Margin="284,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxStreet" HorizontalAlignment="Left" Height="25" Margin="284,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxBuilding" HorizontalAlignment="Left" Height="25" Margin="284,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxApart" HorizontalAlignment="Left" Height="25" Margin="284,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <Label x:Name="labelPersonalInfo" Content="Personal info" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="48,111,0,0" VerticalAlignment="Top" Width="90"/>
-        <Label x:Name="labelAddress" Content="Address" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="249,110,0,0" VerticalAlignment="Top" Width="105"/>
-        <Button x:Name="buttonCreate" Content="Create" HorizontalAlignment="Left" Height="26" Margin="24,325,0,0" VerticalAlignment="Top" Width="89" Click="buttonCreate_Click"/>
-        <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="25" Margin="103,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBoxPass" HorizontalAlignment="Left" Height="25" Margin="282,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
-        <Label x:Name="labelManager" Content="Input information for new Manager" HorizontalAlignment="Left" Height="26" Margin="24,12,0,0" VerticalAlignment="Top" Width="240"/>
-        <Label x:Name="labelLogin" Content="Login:" HorizontalAlignment="Left" Height="25" Margin="15,80,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelPassword" Content="Password:" HorizontalAlignment="Left" Height="25" Margin="203,80,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelLastname" Content="Last name:" HorizontalAlignment="Left" Height="25" Margin="15,146,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelFirstName" Content="First name:" HorizontalAlignment="Left" Height="25" Margin="15,181,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelPhone" Content="Phone:" HorizontalAlignment="Left" Height="25" Margin="15,216,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelEmail" Content="e-mail:" HorizontalAlignment="Left" Height="25" Margin="15,250,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelCity" Content="City:" HorizontalAlignment="Left" Height="25" Margin="203,148,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelStreet" Content="Street:" HorizontalAlignment="Left" Height="25" Margin="203,182,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelBuilding" Content="Building:" HorizontalAlignment="Left" Height="25" Margin="203,217,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="labelApart" Content="Apart:" HorizontalAlignment="Left" Height="25" Margin="203,253,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="25" Margin="102,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="25" Margin="102,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="25" Margin="102,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="25" Margin="102,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxCity" HorizontalAlignment="Left" Height="25" Margin="284,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxStreet" HorizontalAlignment="Left" Height="25" Margin="284,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxBuilding" HorizontalAlignment="Left" Height="25" Margin="284,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxApart" HorizontalAlignment="Left" Height="25" Margin="284,284,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <Label x:Name="labelPersonalInfo" Content="Personal info" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="48,143,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label x:Name="labelAddress" Content="Address" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="25" Margin="249,142,0,0" VerticalAlignment="Top" Width="105"/>
+        <Button x:Name="buttonCreate" Content="Create" HorizontalAlignment="Left" Height="25" Margin="14,328,0,0" VerticalAlignment="Top" Width="90" Click="buttonCreate_Click"/>
+        <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="25" Margin="103,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="textBoxPass" HorizontalAlignment="Left" Height="25" Margin="282,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90"/>
+        <Label x:Name="labelManager" Content="Input information for new Manager" HorizontalAlignment="Left" Height="26" Margin="47,71,0,0" VerticalAlignment="Top" Width="240"/>
+        <Label x:Name="labelLogin" Content="Login:" HorizontalAlignment="Left" Height="25" Margin="15,112,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelPassword" Content="Password:" HorizontalAlignment="Left" Height="25" Margin="203,112,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelLastname" Content="Last name:" HorizontalAlignment="Left" Height="25" Margin="15,178,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelFirstName" Content="First name:" HorizontalAlignment="Left" Height="25" Margin="15,213,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelPhone" Content="Phone:" HorizontalAlignment="Left" Height="25" Margin="15,248,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelEmail" Content="e-mail:" HorizontalAlignment="Left" Height="25" Margin="15,282,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelCity" Content="City:" HorizontalAlignment="Left" Height="25" Margin="203,180,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelStreet" Content="Street:" HorizontalAlignment="Left" Height="25" Margin="203,214,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelBuilding" Content="Building:" HorizontalAlignment="Left" Height="25" Margin="203,249,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="labelApart" Content="Apart:" HorizontalAlignment="Left" Height="25" Margin="203,285,0,0" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="comboBoxManagers" HorizontalAlignment="Left" Height="25" Margin="17,43,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="buttonLoadManagers" Content="Load" HorizontalAlignment="Left" Height="25" Margin="278,43,0,0" VerticalAlignment="Top" Width="100" Click="buttonLoadManagers_Click"/>
+        <Label x:Name="labelListManagers" Content="List Managers:" HorizontalAlignment="Left" Height="25" Margin="18,13,0,0" VerticalAlignment="Top" Width="208"/>
+        <Button x:Name="buttonUpdateManager" Content="Update" HorizontalAlignment="Left" Height="25" Margin="113,328,0,0" VerticalAlignment="Top" Width="90" Click="buttonUpdateManager_Click"/>
+        <Button x:Name="buttonDeleteManager" Content="Delete" HorizontalAlignment="Left" Height="25" Margin="212,328,0,0" VerticalAlignment="Top" Width="90" Click="buttonDeleteManager_Click"/>
+        <Button x:Name="buttonClear" Content="Clear" HorizontalAlignment="Left" Height="25" Margin="313,328,0,0" VerticalAlignment="Top" Width="60" Click="buttonClear_Click"/>
     </Grid>
 </Window>

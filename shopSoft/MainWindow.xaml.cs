@@ -199,7 +199,7 @@ namespace shopSoft
         {
             WindowManager windowManager = new WindowManager();
             windowManager.Owner = this;
-            
+            windowManager.comboBoxManagers.ItemsSource = DB.Managers;
             windowManager.Show();
         }
         /// <summary>

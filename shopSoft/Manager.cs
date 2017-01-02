@@ -11,7 +11,7 @@ namespace shopSoft
     {
         private int _id;
         public string login { set; get; }
-        public string password { set; private get; }
+        public string password { set; get; }
         public Address AddressManager { set; get; }
 
         public int ID
